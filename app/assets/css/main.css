@@ -24,3 +24,10 @@
   vertical-align: middle;
   line-height: 30px;
   height: 35px; }
+
+.done{
+  color:green;
+}
+.progress{
+  color:orange;
+}

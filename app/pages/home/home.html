@@ -3,7 +3,27 @@
     <md-tab id="tab1">
       <md-tab-label>Work</md-tab-label>
       <md-tab-body>
-
+        <table class="table tabel-striped">
+          <thead>
+            <tr>
+                <th>Item</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+             
+              <tr ng-repeat="item in ho.data">
+                  <td> <input type="checkbox"> {{ item.content }}</td>
+                  <td> <i> {{ item.time }}</i> </td>      
+                  <td> <i> {{ item.date }}</i> </td>
+                  <td> <b>{{ item.status }}</b> </td>
+              </tr>
+            </tr>
+            </tbody>
+         
+        </table>
       </md-tab-body>
     </md-tab>
 
@@ -11,7 +31,26 @@
     <md-tab id="tab2">
       <md-tab-label>Life</md-tab-label>
       <md-tab-body>
-        View
+        <table class="table tabel-striped">
+          <thead>
+            <tr>
+                <th>Item</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+             
+              <tr ng-repeat="item in ho.data">
+                  <td> <input type="checkbox"> {{ item.content }}</td>
+                  <td> <i> {{ item.time }}</i> </td>      
+                  <td> <i> {{ item.date }}</i> </td>
+                  <td> <b>{{ item.status }}</b> </td>
+              </tr>
+            </tr>
+            </tbody>
+        </table>
       </md-tab-body>
     </md-tab>
   
