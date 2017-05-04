@@ -1,0 +1,26 @@
+<div layout="row" flex="20">
+  
+	<md-input-container>
+		<label>Select category...</label>
+			<md-select ng-model="ho.category" name="category">
+				<md-option ng-model="ho.work" value="work">Work</md-option>
+				<md-option ng-model="ho.life" value="personal_life">Personal Life</md-option>
+				<md-option ng-model="ho.wish" value="wishlist">Wishlist</md-option>
+			</md-select>
+	</md-input-container> 	
+</div>
+<div layout="row">
+	<md-input-container>
+		<label>Add Item</label>
+		<input ng-model="ho.item" type="text" name="item"/>
+	</md-input-container>
+</div>
+
+ <div layout="row" layout-align="center center">
+   <md-button ng-click="ho.add()" class="md-fab md-mini md-primary" aria-label="Add Item">
+        <md-icon md-font-icon="fa fa-minus"></md-icon>
+  </md-button>
+ </div>
+
+
+ 
