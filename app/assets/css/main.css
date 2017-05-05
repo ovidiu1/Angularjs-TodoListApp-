@@ -31,3 +31,13 @@
 .progress{
   color:orange;
 }
+.strike {
+  text-decoration: line-through;
+}
+input:focus {
+   
+}
+input {
+    border:none;
+    background-color:transparent;
+}

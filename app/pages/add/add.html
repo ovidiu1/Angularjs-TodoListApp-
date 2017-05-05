@@ -1,5 +1,4 @@
 <div layout="row" flex="20">
-  
 	<md-input-container>
 		<label>Select category...</label>
 			<md-select ng-model="ho.category" name="category">
@@ -12,12 +11,12 @@
 <div layout="row">
 	<md-input-container>
 		<label>Add Item</label>
-		<input ng-model="ho.item" type="text" name="item"/>
+		<input ng-model="ho.item" type="text" name="item" required/>
 	</md-input-container>
 </div>
 
  <div layout="row" layout-align="center center">
-   <md-button ng-click="ho.addItem()" class="md-fab md-mini md-primary" aria-label="Add Item">
+   <md-button ng-click="ho.addItem()"  class="md-fab md-mini md-primary" aria-label="Add Item">
         <md-icon md-font-icon="fa fa-minus"></md-icon>
   </md-button>
  </div>

@@ -1,52 +1,72 @@
 <md-content>
   <md-tabs class="md-primary" md-align-tabs="top" md-center-tabs="true" md-no-select-click="true" md-swipe-content="true" md-dynamic-height="true">
     <md-tab id="tab1">
-      <md-tab-label>Work</md-tab-label>
+      <md-tab-label><i class="material-icons">&#xE8F9;</i></md-tab-label>
       <md-tab-body>
         <table class="table tabel-striped">
           <thead>
             <tr>
+                <th><input type="checkbox" ng-model="all"></th>
                 <th>Item</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th>Status</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
-             
-              <tr ng-repeat="item in ho.data">
-                  <td> <input type="checkbox"> {{ item.content }}</td>
-                  <td> <i> {{ item.time }}</i> </td>      
-                  <td> <i> {{ item.date }}</i> </td>
+              <tr ng-repeat="item in ho.data" >
+                <td>  <input type="checkbox" ng-click="ho.selectItem(item)" ng-model="done"></td>
+                  <td>
+                    <span ng-hide="item.editing" ng-dblclick="ho.editItem(item)"> {{ item.content }} </span>
+                    <input ng-show="item.editing" ng-model="item.content" ng-blur="ho.doneEdit(item)" autofocus />
+                  </td>
+                  <td> <i>{{ item.time }}</i></td>      
+                  <td> <i>{{ item.date }}</i> </td>
                   <td> <b>{{ item.status }}</b> </td>
+                  <td>
+                  <button class="btn btn-danger" ng-click="ho.removeItem(item)">
+				              <span class="glyphicon glyphicon-remove"></span>
+			            </button>
+                  </td>
               </tr>
             </tr>
             </tbody>
-         
         </table>
       </md-tab-body>
     </md-tab>
 
 
     <md-tab id="tab2">
-      <md-tab-label>Life</md-tab-label>
+      <md-tab-label><i class="material-icons">&#xE87D;</i></md-tab-label>
       <md-tab-body>
         <table class="table tabel-striped">
           <thead>
             <tr>
+                <th><input type="checkbox" ng-model="all"></th>
                 <th>Item</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th>Status</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
              
-              <tr ng-repeat="item in ho.data">
-                  <td> <input type="checkbox"> {{ item.content }}</td>
+              <tr ng-repeat="item in ho.data" >
+               <td>  <input type="checkbox" ng-click="ho.selectItem(item)" ng-model="done"></td>
+               <td>
+                    <span ng-hide="item.editing" ng-dblclick="ho.editItem(item)"> {{ item.content }} </span>
+                    <input ng-show="item.editing" ng-model="item.content" ng-blur="ho.doneEdit(item)" autofocus />
+              </td>
                   <td> <i> {{ item.time }}</i> </td>      
                   <td> <i> {{ item.date }}</i> </td>
                   <td> <b>{{ item.status }}</b> </td>
+                  <td>
+                  <button class="btn btn-danger" ng-click="ho.removeItem(item)">
+				              <span class="glyphicon glyphicon-remove"></span>
+			            </button>
+                  </td>
               </tr>
             </tr>
             </tbody>
@@ -55,7 +75,7 @@
     </md-tab>
   
    <md-tab id="tab2">
-      <md-tab-label>Wish</md-tab-label>
+      <md-tab-label><i class="material-icons">&#xE8D0;</i></md-tab-label>
       <md-tab-body>
         View
       </md-tab-body>
