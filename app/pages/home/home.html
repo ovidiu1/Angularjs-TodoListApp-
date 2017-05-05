@@ -14,8 +14,9 @@
                 <th>Actions</th>
             </tr>
             </thead>
+      
             <tbody>
-              <tr ng-repeat="item in ho.data" >
+              <tr ng-repeat="item in ho.data | workFilter" >
                 <td>  <input type="checkbox" ng-click="ho.selectItem(item)" ng-model="done"></td>
                   <td>
                     <span ng-hide="item.editing" ng-dblclick="ho.editItem(item)"> {{ item.content }} </span>
@@ -36,7 +37,6 @@
       </md-tab-body>
     </md-tab>
 
-
     <md-tab id="tab2">
       <md-tab-label><i class="material-icons">&#xE87D;</i></md-tab-label>
       <md-tab-body>
@@ -53,14 +53,14 @@
             </thead>
             <tbody>
              
-              <tr ng-repeat="item in ho.data" >
+              <tr ng-repeat="item in ho.data | lifeFilter">
                <td>  <input type="checkbox" ng-click="ho.selectItem(item)" ng-model="done"></td>
                <td>
                     <span ng-hide="item.editing" ng-dblclick="ho.editItem(item)"> {{ item.content }} </span>
                     <input ng-show="item.editing" ng-model="item.content" ng-blur="ho.doneEdit(item)" autofocus />
               </td>
-                  <td> <i> {{ item.time }}</i> </td>      
-                  <td> <i> {{ item.date }}</i> </td>
+                  <td> <i>{{ item.time }}</i> </td>      
+                  <td> <i>{{ item.date }}</i> </td>
                   <td> <b>{{ item.status }}</b> </td>
                   <td>
                   <button class="btn btn-danger" ng-click="ho.removeItem(item)">
@@ -77,7 +77,37 @@
    <md-tab id="tab2">
       <md-tab-label><i class="material-icons">&#xE8D0;</i></md-tab-label>
       <md-tab-body>
-        View
+        <table class="table tabel-striped">
+          <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="all"></th>
+                <th>Item</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+             
+              <tr ng-repeat="item in ho.data | wishFilter">
+               <td>  <input type="checkbox" ng-click="ho.selectItem(item)" ng-model="done"></td>
+               <td>
+                    <span ng-hide="item.editing" ng-dblclick="ho.editItem(item)"> {{ item.content }} </span>
+                    <input ng-show="item.editing" ng-model="item.content" ng-blur="ho.doneEdit(item)" autofocus />
+              </td>
+                  <td> <i>{{ item.time }}</i> </td>      
+                  <td> <i>{{ item.date }}</i> </td>
+                  <td> <b>{{ item.status }}</b> </td>
+                  <td>
+                  <button class="btn btn-danger" ng-click="ho.removeItem(item)">
+				              <span class="glyphicon glyphicon-remove"></span>
+			            </button>
+                  </td>
+              </tr>
+            </tr>
+            </tbody>
+        </table>
       </md-tab-body>
     </md-tab>
 

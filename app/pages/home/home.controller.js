@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('ToDoApp')
+       
         .controller('HomeController', HomeController);
     HomeController.$inject = ['$scope','ItemData','$filter'];
     function HomeController($scope,ItemData,$filter) {
@@ -17,7 +18,7 @@
         ho.obj = new Date();
         ho.format = $filter('date')(ho.obj, "dd/MM/yyyy");
         ho.time = $filter('date')(ho.obj, "hh:mm");
-           
+        
         function getData(){
            ho.data = ItemData.Data;
         }
