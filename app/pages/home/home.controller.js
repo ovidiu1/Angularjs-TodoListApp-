@@ -4,9 +4,10 @@
     angular.module('ToDoApp')
        
         .controller('HomeController', HomeController);
-    HomeController.$inject = ['$scope','ItemData','$filter'];
-    function HomeController($scope,ItemData,$filter) {
+    HomeController.$inject = ['$scope','ItemData','$filter','$mdToast'];
+    function HomeController($scope,ItemData,$filter,$mdToast) {
         var ho = this;
+        ho.obj = new Date();
 
          ho.getData = getData;
          ho.addItem = addItem;
@@ -14,8 +15,9 @@
          ho.removeItem = removeItem;
          ho.editItem = editItem;
          ho.doneEdit = doneEdit;
+         ho.toastAction = toastAction;
+
         
-        ho.obj = new Date();
         ho.format = $filter('date')(ho.obj, "dd/MM/yyyy");
         ho.time = $filter('date')(ho.obj, "hh:mm");
         
@@ -32,6 +34,7 @@
                 time:ho.time
             };
             ho.data.push(newItem);
+            ho.toastAction();
         }   
 
         function selectItem(item){
@@ -53,6 +56,14 @@
             item.editing = true;            
         }
 
+        function toastAction(){
+            $mdToast.show(
+            $mdToast.simple()
+            .textContent('Item saved!',ho.category)
+            .position('bottom right')
+            .hideDelay(3000)
+            );
+        }       
         ho.getData();   
     }
 })();

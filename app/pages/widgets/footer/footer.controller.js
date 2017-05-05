@@ -17,11 +17,6 @@
                 targetEvent: ev,
                 clickOutsideToClose: true
             })
-            .then(function (answer) {
-                fo.status = 'You said the information was "' + answer + '".';
-            }, function () {
-                fo.status = '132';
-            });
       	}
 
       
