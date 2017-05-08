@@ -5,6 +5,7 @@
   left: 0;
   padding: 1rem;
 } 
+
 .tabsdemoStaticTabs md-content md-tabs {
   border: 1px solid #e1e1e1;
  
@@ -23,8 +24,9 @@
   padding-right: 15px;
   vertical-align: middle;
   line-height: 30px;
-  height: 35px; }
-
+  height: 35px;
+  }
+  
 .done{
   color:green;
 }

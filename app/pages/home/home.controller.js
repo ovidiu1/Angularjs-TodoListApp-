@@ -19,7 +19,7 @@
 
         
         ho.format = $filter('date')(ho.obj, "dd/MM/yyyy");
-        ho.time = $filter('date')(ho.obj, "hh:mm");
+        ho.time = $filter('date')(ho.obj, "HH:mm");
         
         function getData(){
            ho.data = ItemData.Data;
