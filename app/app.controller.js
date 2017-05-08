@@ -41,10 +41,6 @@
     AppController.$inject = ['$rootScope'];
     function AppController($rootScope) {
         var ap = this;
-
-
-        //call
-        ap.testController();
     };
 
 })();

@@ -23,7 +23,6 @@
         
         function getData(){
            ho.data = ItemData.Data;
-           console.log(ho.data);
         }
 
         function addItem(){
@@ -40,7 +39,7 @@
 
         function selectItem(item){
             ho.item = item;
-            console.log(ho.item);
+            
         }
 
         function removeItem(item){
@@ -50,7 +49,7 @@
         
         function editItem(item){
             item.editing = true;
-            console.log(item.editing);
+           
         }
 
         function doneEdit(item){
