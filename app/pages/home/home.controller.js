@@ -23,6 +23,7 @@
         
         function getData(){
            ho.data = ItemData.Data;
+           console.log(ho.data);
         }
 
         function addItem(){

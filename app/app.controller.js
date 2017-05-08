@@ -42,12 +42,6 @@
     function AppController($rootScope) {
         var ap = this;
 
-        ap.message = "AppController Loaded!";
-        ap.testController = testController;
-
-        function testController(){
-        	console.log(ap.message);
-        }
 
         //call
         ap.testController();
