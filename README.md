@@ -3,6 +3,7 @@
 <h3>Install</h3>
 <ul>
 <li>git clone https://github.com/ovidiu1/Angularjs-TodoListApp-.git</li>
+<li> cd Angularjs-TodoListApp- </li>
  <li> bower install && npm install </li>
     <li> gulp </li>
     <li> go to localhost:8080 </li>
