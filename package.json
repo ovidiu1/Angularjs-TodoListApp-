@@ -1,7 +1,7 @@
 {
   "name": "todoapp",
   "version": "1.0.0",
-  "description": "<h1>Todo List</h1>\r <h3><a href=\"http://todoapp-ovichat.rhcloud.com/\">Live Demo</a></h3>\r <h3>Install</h3>\r <ul>\r <li>git clone https://github.com/ovidiu1/Angularjs-TodoListApp-.git</li>\r <li> cd Angularjs-TodoListApp-</li>\r <li> bower install </li>\r </ul>",
+  "description": "<h1>Todo List</h1>\r <h3><a href=\"https://ovidiuo-todo-app.herokuapp.com/\">Live Demo</a></h3>\r <h3>Install</h3>\r <ul>\r <li>git clone https://github.com/ovidiu1/Angularjs-TodoListApp-.git</li>\r <li> cd Angularjs-TodoListApp-</li>\r <li> bower install </li>\r </ul>",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
