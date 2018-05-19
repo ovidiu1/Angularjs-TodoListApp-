@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "<h1>Todo List</h1>\r <h3><a href=\"http://todoapp-ovichat.rhcloud.com/\">Live Demo</a></h3>\r <h3>Install</h3>\r <ul>\r <li>git clone https://github.com/ovidiu1/Angularjs-TodoListApp-.git</li>\r <li> cd Angularjs-TodoListApp-</li>\r <li> bower install </li>\r </ul>",
   "main": "index.html",
+  "engines": {
+    "node": "8.11.1",
+    "npm":"5.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install":"bower install",
-    "start":"gulp"
+    "install": "bower install",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +22,8 @@
     "url": "https://github.com/ovidiu1/Angularjs-TodoListApp-/issues"
   },
   "homepage": "https://github.com/ovidiu1/Angularjs-TodoListApp-#readme",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0"
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "express": "^4.16.3"
   }
 }
