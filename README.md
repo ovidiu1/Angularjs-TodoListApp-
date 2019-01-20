@@ -13,4 +13,3 @@
  <li> <a href="https://angularjs.org/">AngularJS</a></li>
  <li> <a href="https://material.angularjs.org/latest/">AngularJS Material library</a></li>
 </ul>
-<h3></h3>
