@@ -8,3 +8,9 @@
     <li> npm start </li>
     <li> go to localhost:8080 </li>
 </ul>
+<h3>Framework</h3>
+<ul>
+ <li> <a href="https://angularjs.org/">AngularJS</a></li>
+ <li> <a href="https://material.angularjs.org/latest/">AngularJS Material library</a></li>
+</ul>
+<h3></h3>
